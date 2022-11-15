@@ -1,5 +1,5 @@
 {
   "ProjectOverviewURL": "https://dbs-emea-north-cfdev2.launchpad.cfapps.eu10.hana.ondemand.com/lcapBASApp.BASAppLaunchpad-1.0.0",
-  "DeployedUTCTime": "2022-11-15T22:34:07.198Z",
+  "DeployedUTCTime": "2022-11-15T22:52:07.824Z",
   "ApplicationLogURL": "https://logs.cf.eu10.hana.ondemand.com/app/dashboards#/view/Overview?_g=(filters:!((query:(match_phrase:(component_name:BASApp-srv)))))"
 }

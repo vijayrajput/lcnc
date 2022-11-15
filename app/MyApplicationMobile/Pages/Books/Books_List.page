@@ -1,24 +1,33 @@
 {
-	"Caption": "Books",
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/MyApplicationMobile/Actions/Books/NavToBooks_Create.action",
-				"Position": "Right",
-				"SystemItem": "Add"
-			}
-		]
-	},
 	"Controls": [
 		{
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
 			"Sections": [
 				{
 					"Header": {
+						"_Name": "SectionHeader0",
 						"UseTopPadding": false
 					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"EntitySet": "Books",
+						"Service": "/MyApplicationMobile/Services/service1.service",
+						"QueryOptions": ""
+					},
+					"_Name": "SectionObjectTable0",
+					"EmptySection": {
+						"Caption": "No record found!",
+						"FooterVisible": false
+					},
 					"ObjectCell": {
+						"Title": "{name}",
+						"Subhead": "{price}",
+						"DetailImageIsCircular": true,
+						"PreserveIconStackSpacing": false,
 						"AccessoryType": "disclosureIndicator",
-						"Description": "",
+						"Tags": [
+						],
 						"AvatarStack": {
 							"Avatars": [
 								{
@@ -27,18 +36,16 @@
 							],
 							"ImageIsCircular": false
 						},
-						"Icons": [],
+						"AvatarGrid": {
+							"Avatars": [
+							]
+						},
 						"OnPress": "/MyApplicationMobile/Actions/Books/NavToBooks_Detail.action",
-						"StatusImage": "",
-						"Title": "{name}",
-						"Footnote": "",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "",
-						"Subhead": "{price}",
-						"SubstatusText": ""
-					},
-					"EmptySection": {
-						"Caption": "No record found!"
+						"ContextMenu": {
+							"Items": [
+							],
+							"PerformFirstActionWithFullSwipe": true
+						}
 					},
 					"Search": {
 						"Enabled": true,
@@ -50,34 +57,43 @@
 					"DataPaging": {
 						"ShowLoadingIndicator": true,
 						"LoadingIndicatorText": "Loading more items, please wait..."
-					},
-					"Target": {
-						"EntitySet": "Books",
-						"Service": "/MyApplicationMobile/Services/service1.service",
-						"QueryOptions": ""
-					},
-					"_Type": "Section.Type.ObjectTable"
+					}
 				}
 			],
 			"LoadingIndicator": {
 				"Enabled": true,
 				"Text": "Loading, please wait..."
-			},
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable"
+			}
 		}
 	],
 	"_Type": "Page",
+	"_Name": "Books_List",
+	"Caption": "Books",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Add",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MyApplicationMobile/Actions/Books/NavToBooks_Create.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	},
 	"ToolBar": {
 		"Items": [
 			{
-				"_Name": "LogoutToolbarItem",
 				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "LogoutToolbarItem",
 				"Caption": "Logout",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
 				"OnPress": "/MyApplicationMobile/Actions/Logout.action"
 			}
 		]
-	},
-	"_Name": "Books_List",
-	"PrefersLargeCaption": true
+	}
 }

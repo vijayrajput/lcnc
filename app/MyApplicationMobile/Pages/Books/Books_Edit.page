@@ -1,0 +1,50 @@
+{
+	"Caption": "Update Books Detail",
+	"DesignTimeTarget": {
+		"Service": "/MyApplicationMobile/Services/service1.service",
+		"EntitySet": "Books",
+		"QueryOptions": ""
+	},
+	"ActionBar": {
+		"Items": [
+			{
+				"Position": "Left",
+				"Caption": "Cancel",
+				"OnPress": "/MyApplicationMobile/Rules/Books/Books_Cancel.js"
+			},
+			{
+				"Position": "Right",
+				"SystemItem": "Save",
+				"OnPress": "/MyApplicationMobile/Rules/Books/Books_UpdateEntity.js"
+			}
+		]
+	},
+	"Controls": [
+		{
+			"Sections": [
+				{
+					"Caption": "",
+					"Controls": [
+						{
+							"Caption": "name",
+							"_Name": "name",
+							"Value": "{name}",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						},
+						{
+							"Caption": "price",
+							"_Name": "price",
+							"Value": "{price}",
+							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty"
+						}
+					]
+				}
+			],
+			"_Name": "PageOneFormCell",
+			"_Type": "Control.Type.FormCellContainer"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Books_Edit"
+}

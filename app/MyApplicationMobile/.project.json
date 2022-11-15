@@ -1,0 +1,66 @@
+{
+	"Credential": "cf",
+	"CF": {
+		"Target": "",
+		"Organization": "",
+		"Space": "",
+		"Deploy": {
+			"Description": "My SAP application Mobile",
+			"WebClient": {
+				"Runtime": "preview",
+				"URL": ""
+			},
+			"Destination": [
+				{
+					"CF": "BASApp-app-srv",
+					"MDK": "../service/BASApp/",
+					"URL": ""
+				}
+			]
+		}
+	},
+	"MobileService": {
+		"Type": "standard",
+		"AdminAPI": "",
+		"AppId": "lcap.BASApp.MyApplicationMobile",
+		"Destination": []
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": ""
+	},
+	"LCAP": {
+		"FullName": "BASApp_MyApplicationMobile",
+		"Service": [
+			{
+				"mdk": "MyApplicationMobile/Services/service1.service",
+				"cap": {
+					"name": "BASAppService",
+					"sourcePath": "srv/service.cds",
+					"path": "/service/BASApp/",
+					"entryPath": "/service/BASApp",
+					"destination": "BASApp-app-srv",
+					"value": "0"
+				},
+				"links": [
+					{
+						"entity": "BASAppService.Books",
+						"files": [
+							"MyApplicationMobile/Pages/Books/Books_Detail.page",
+							"MyApplicationMobile/Pages/Books/Books_Edit.page",
+							"MyApplicationMobile/Pages/Books/Books_List.page",
+							"MyApplicationMobile/Actions/Books/Books_CreateEntity.action",
+							"MyApplicationMobile/Actions/Books/Books_DeleteEntity.action",
+							"MyApplicationMobile/Actions/Books/Books_UpdateEntity.action"
+						]
+					}
+				]
+			}
+		],
+		"sourceTemplate": {
+			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
+			"version": "1.40.12"
+		}
+	}
+}

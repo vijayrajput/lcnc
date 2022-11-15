@@ -1,0 +1,17 @@
+{
+    "CreateLinks": [],
+    "OnFailure": "/MyApplicationMobile/Actions/CreateEntityFailureMessage.action",
+    "OnSuccess": "/MyApplicationMobile/Actions/CreateEntitySuccessMessage.action",
+    "Properties": {
+        "name": "#Control:name/#Value",
+        "price": "#Control:price/#Value"
+    },
+    "Target": {
+        "EntitySet": "Books",
+        "Service": "/MyApplicationMobile/Services/service1.service"
+    },
+    "ActionResult": {
+        "_Name": "create"
+    },
+    "_Type": "Action.Type.ODataService.CreateEntity"
+}
